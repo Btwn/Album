@@ -20,7 +20,7 @@ class Album implements InputFilterAwareInterface
 
 	public function exchangeArray(array $data){
 		$this->id = !empty($data['id']) ? $data['id'] : null;
-		$this->artistic = !empty($data['artistic']) ? $data['artistic'] : null;
+		$this->artist = !empty($data['artist']) ? $data['artist'] : null;
 		$this->title = !empty($data['title']) ? $data['title'] : null;
 	}
 
