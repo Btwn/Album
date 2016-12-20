@@ -72,7 +72,7 @@ class AlbumController extends AbstractActionController
 		}
 
 		$this->table->saveAlbum($album);
-		return $this->redirect()->toRoute('albu', ['action' => 'index']);
+		return $this->redirect()->toRoute('album', ['action' => 'index']);
 	}
 
 	public function deleteAction(){
@@ -85,7 +85,7 @@ class AlbumController extends AbstractActionController
 		if ($request->isPost()){
 			$del = $request->getPost('del', 'No');
 			if ($del == 'Yes'){
-				$del = (int) $request->getRequest('id');
+				$del = (int) $request->getPost('id');
 				$this->table->deleteAlbum($id);
 			}
 			return $this->redirect()->toRoute('album');

@@ -40,7 +40,7 @@ class AlbumTable
 		if (! $this->getAlbum($id)){
 			throw new RuntimeException(sprintf('No se puede actualizar el album con el identificador $d; no existe' , $id));
 		}
-		$this->tableGateway->update($data. ['id' => $id]);
+		$this->tableGateway->update($data, ['id' => $id]);
 	}
 
 	public function deleteAlbum($id){
